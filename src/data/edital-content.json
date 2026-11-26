@@ -1,0 +1,198 @@
+{
+  "institution": [
+    "LIGA BAHIANA CONTRA O CÂNCER",
+    "HOSPITAL ARISTIDES MALTEZ",
+    "SERVIÇO DE UROLOGIA"
+  ],
+  "title": "FELLOWSHIP EM URO-ONCOLOGIA E CIRURGIA ROBÓTICA",
+  "subtitle": "PROCESSO SELETIVO 2027",
+  "dateLocation": "Salvador, 07 de novembro de 2026.",
+  "preamble": "O departamento de ensino e pesquisa (D.E.P), do Hospital Aristides Maltez, torna público por meio deste edital, que no período abaixo citado estarão abertas inscrições para processo seletivo do programa de fellowship em uro-oncologia e cirurgia robótica da instituição.",
+  "quickFacts": {
+    "bankLabel": "Dados para depósito bancário da taxa de inscrição",
+    "bankValue": "Caixa Econômica Federal · Ag 1236 · Conta Corrente 918-1 · Operação 003 · CNPJ 15.180.961/0001-00 · Liga Bahiana Contra o Câncer (LBCC)",
+    "emailLabel": "Envio de currículo (até 72h antes da seleção)",
+    "emailValue": "gutomodestoneto@gmail.com"
+  },
+  "sections": [
+    {
+      "id": "edital-inscricoes",
+      "navLabel": "Inscrições",
+      "heading": "Das inscrições",
+      "clauses": [
+        {
+          "number": "1.",
+          "text": "As inscrições serão recebidas no período de 28 de novembro de 2026 à 18 de fevereiro de 2027; das 09h às 15h30, na Biblioteca do Hospital Aristides Maltez, na Av. Dom João VI, 332, Brotas, CEP 40285-001, Salvador, BA ou, através do site: www.lbcc.org.br, ou ainda, pelo número: 71 9 9917 1679."
+        },
+        {
+          "number": "2.",
+          "text": "Para realizar a inscrição o candidato deverá entregar currículo vitae, além dos documentos anexos: RG, CPF e o CRM-BA (o candidato que não possuir registro no CRM-BA, poderá utilizar o CRM do estado ou país de origem e caso seja aprovado no processo seletivo, poderá solicitar transferência para o CRM-BA), diploma de Urologia (ou certificado que comprove estar cursando o último ano de residência médica em Urologia), e comprovante de pagamento da taxa de inscrição.",
+          "note": "OBS: Para candidato estrangeiro os documentos exigidos são os mesmos, sendo que o estudante selecionado só poderá atuar no HAM e sempre sob supervisão, e NUNCA exercendo atividades remuneradas como médico fora da instituição na qual o programa está vinculado. Caso haja a necessidade de atuar, mesmo no HAM, com registro provisório do CRM-BA, o órgão precisa estar de acordo e o nome e registro do coordenador do programa deverá também constar no registro provisório do aluno."
+        },
+        {
+          "number": "3.",
+          "text": "As inscrições deverão ser feitas mediante o correto preenchimento de ficha de inscrição, disponível no site do Hospital Aristides Maltez (www.lbcc.org.br) e o pagamento da taxa, por meio de depósito bancário (Caixa Econômica Federal, Ag 1236, Conta Corrente 918-1, Operação 003, CNPJ 15.180.961/0001-00 em nome da Liga Bahiana Contra o Câncer, LBCC). O comprovante de depósito deverá ser entregue no ato da inscrição."
+        },
+        {
+          "number": "4.",
+          "text": "As inscrições realizadas por correio deverão atender os requisitos do item 3, entretanto, só serão aceitas inscrições recebidas até a data limite de inscrição, dia 18 de fevereiro de 2027."
+        }
+      ]
+    },
+    {
+      "id": "edital-selecao",
+      "navLabel": "Seleção",
+      "heading": "Da Seleção",
+      "clauses": [
+        {
+          "number": "5.",
+          "text": "A seleção será realizada de forma on-line e composta por: Análise de Currículo (Peso 4) e Entrevista (Peso 6). Total: Peso 10."
+        },
+        {
+          "number": "Currículo",
+          "text": "Os currículos serão enviados para o e-mail do coordenador do serviço, Dr. Augusto Modesto de Souza Neto (gutomodestoneto@gmail.com), em até 72h antes da seleção."
+        },
+        {
+          "number": "Entrevista",
+          "text": "Realizada de forma on-line com todos os candidatos, no dia 19/02/2027, sexta-feira. Horário: a partir das 19h, via Zoom, com link gerado e enviado para os candidatos com até 24h antes da entrevista."
+        }
+      ]
+    },
+    {
+      "id": "edital-cronograma",
+      "navLabel": "Resultado e matrícula",
+      "heading": "Resultado final, Matrícula, Início e Certificado",
+      "clauses": [
+        {
+          "number": "6. Resultado",
+          "text": "O resultado final (entrevista, análise de currículo e a classificação dos candidatos no processo seletivo) será divulgado no site do Hospital Aristides Maltez (www.lbcc.org.br), ou pelo telefone: (71) 3357-6812, DEP (Departamento de Ensino e Pesquisa), ou ainda, pelo número: 71 9 9917 1679, a partir do dia 22/02/2027 (segunda-feira)."
+        },
+        {
+          "number": "6. Matrícula",
+          "text": "A matrícula dos classificados para as duas vagas será realizada nos dias 23 a 26/02 (terça à sexta-feira) de fevereiro de 2027, das 09h às 15h30, na Biblioteca do Hospital Aristides Maltez, na Av. Dom João VI, 332, Brotas, CEP 40285-001, Salvador, BA. O candidato aprovado que não realizar a inscrição no período previsto caracterizará desistência do processo seletivo, ficando a instituição autorizada a proceder com nova convocação."
+        },
+        {
+          "number": "7. Início",
+          "text": "As atividades dos alunos se iniciarão no dia 01/03/2027, segunda-feira, às 07h."
+        },
+        {
+          "number": "8. Certificado",
+          "text": "Será emitido somente pelo Hospital Aristides Maltez ao término de 1 (um) ano do programa, após quitação da taxa de administração paga pelo candidato mensalmente durante 1 (um) ano ao Departamento de Ensino e Pesquisa (D.E.P), no valor de R$ 800,00 (OITOCENTOS REAIS)."
+        }
+      ]
+    },
+    {
+      "id": "edital-orientacoes",
+      "navLabel": "Orientações",
+      "heading": "Orientações e Roteiro",
+      "summarySpecs": [
+        { "label": "Participação", "value": "Exclusivo a médicos urologistas." },
+        { "label": "Pré-requisito", "value": "Residência Médica em Urologia" },
+        { "label": "Duração", "value": "01 ano" },
+        { "label": "Carga horária mínima anual", "value": "1.200 horas" },
+        { "label": "Número de vagas", "value": "02 (por ano)" },
+        { "label": "Intervalo (férias)", "value": "30 dias escolhidos pelo estagiário, podendo ser divididos em 2 períodos de 15 dias." },
+        { "label": "Admissão", "value": "Seleção por entrevista e análise de currículo." }
+      ],
+      "clauses": [
+        {
+          "number": "Roteiro",
+          "text": "O especializando fará treinamento em serviço SUS, de referência e alto volume, exclusivo em uro-oncologia, com supervisão contínua de preceptores qualificados. Suas atividades serão divididas em atividades clínicas, com ambulatórios semanais e de enfermaria, e atividades cirúrgicas com turnos operatórios. As atividades de pesquisa, preparação de casos clínicos e estudo devem ser realizados nos outros turnos."
+        }
+      ]
+    },
+    {
+      "id": "edital-atividades",
+      "navLabel": "Atividades",
+      "heading": "Atividades do Curso e Atividade Teórica",
+      "clauses": [
+        {
+          "number": "Ambulatório",
+          "text": "Participação no atendimento de pacientes de primeira consulta, cistoscopias, revisões clínicas e cirúrgicas. Deverão ser ocupados 03 turnos semanais nesta atividade."
+        },
+        {
+          "number": "Enfermaria",
+          "text": "Acompanhamento dos pacientes internados com evolução diária em dias de semana. A visita à enfermaria durante os sábados, domingos e feriados seguirá escala fazendo semanas alternadas. As visitas à enfermaria serão supervisionadas por um médico preceptor do serviço por escala definida."
+        },
+        {
+          "number": "Centro cirúrgico",
+          "text": "Atuação nas cirurgias do serviço, com desenvolvimento técnico gradativo, aumentando sua participação progressiva como cirurgião principal, demonstrando capacidade em realizar as cirurgias com competência e segurança. Esta atividade deve ocupar 04 turnos por semana."
+        },
+        {
+          "number": "Cirurgia robótica",
+          "text": "O programa do fellowship tem intercâmbio com hospitais da rede privada com plataforma robótica instalada e os aperfeiçoandos do programa participarão do treinamento e posterior certificação em cirurgia robótica pela INTUITIVE, cumprindo todas as etapas desse processo. Todo esse processo é supervisionado e acompanhado por preceptores dos serviços pertencentes a este intercâmbio. Vale salientar que o fellow escalado naquele mês na cirurgia robótica participará de TODAS as cirurgias agendadas no mês correspondente e essa atividade será prioritária em relação às outras do programa."
+        },
+        {
+          "number": "Pesquisa científica",
+          "text": "Participação em atividades de pesquisa em uro-oncologia, associado ao Núcleo de Estudos e Pesquisa em Uro-Oncologia (NEPU) e ao DEP (Departamento de Estudos e Pesquisa) do HAM. No momento, o serviço apresenta 3 projetos em andamento, já submetidos à plataforma Brasil e APROVADO pelo CEP nas áreas de câncer de bexiga, câncer de pênis e câncer de próstata. Participa ainda de 02 (dois) estudos Proadi SUS/MS (Projeto Genoma Brasil, com objetivo de desenhar o mapa genético do câncer de próstata a nível Brasil, contando com apenas 8 centros cadastrados no projeto, e o Projeto VigiaSUS, primeiro estudo brasileiro que visa avaliar um protocolo assistencial de vigilância ativa para câncer de próstata no SUS). Realização de pós-graduações a nível de Mestrado e/ou doutorado podem ser realizadas pelos alunos do programa, dependendo do interesse e utilizando os dados dos estudos realizados no HAM."
+        },
+        {
+          "number": "Teórica 1",
+          "text": "Reunião semanal, presencial, baseada em discussão de casos clínicos e apresentação de artigos científicos, em uro-oncologia e urologia geral (segunda-feira, 19h; duração 1h)."
+        },
+        {
+          "number": "Teórica 2",
+          "text": "Reunião semanal, baseada em discussões de casos clínicos, com a participação dos fellows, residentes de urologia e acadêmicos de medicina e da pesquisa, toda terça-feira às 19h. Duração: 1h. A reunião poderá ser presencial, on-line ou híbrida."
+        },
+        {
+          "number": "Teórica 3",
+          "text": "Apresentação de aulas e/ou casos clínicos em reuniões, simpósios e congressos regionais e nacionais."
+        }
+      ]
+    },
+    {
+      "id": "edital-carga",
+      "navLabel": "Carga horária",
+      "heading": "Carga Horária Semanal",
+      "workloadTable": [
+        { "activity": "CENTRO CIRÚRGICO", "shifts": "04", "hours": "24h" },
+        { "activity": "AMBULATÓRIO / PESQUISA", "shifts": "03", "hours": "12h" },
+        { "activity": "ENFERMARIA", "shifts": "04", "hours": "4h" },
+        { "activity": "TOTAL", "shifts": "", "hours": "40h" }
+      ],
+      "clauses": [
+        {
+          "number": "Escala",
+          "text": "Durante todos os dias da semana, inclusive aos domingos, haverá acompanhamento de enfermaria e internamento dos pacientes do serviço, além do sobreaviso de pacientes de urgência ou emergência. Os alunos do programa farão uma escala em que deverão se alternar para estas atividades."
+        }
+      ]
+    },
+    {
+      "id": "edital-programa",
+      "navLabel": "Programa teórico",
+      "heading": "Programa Teórico em Uro-Oncologia",
+      "topics": [
+        "Diagnóstico do câncer de próstata (Rastreio; Biópsia)",
+        "Vigilância ativa no câncer de próstata",
+        "Aspectos cirúrgicos do tratamento do câncer de próstata",
+        "Tumor de próstata metastático",
+        "Radioterapia em uro-oncologia",
+        "Tumor do rim",
+        "Tumor de pênis",
+        "Tumor bexiga não músculo invasivo",
+        "Tumor bexiga músculo invasivo",
+        "Preservação vesical no tumor de bexiga (Trimodalidade)",
+        "Nódulos adrenais",
+        "Tumores de testículo",
+        "Laparoscopia em uro-oncologia",
+        "Tumores uroteliais do trato superior",
+        "Cirurgia robótica urológica"
+      ]
+    }
+  ],
+  "signatures": [
+    {
+      "name": "Dr. Augusto Modesto de Souza Neto",
+      "lines": [
+        "Chefe do Serviço de Urologia do Hospital Aristides Maltez e coordenador do fellowship do HAM",
+        "www.augustomodesto.com.br · @dr.augusto_modesto · gutomodestoneto@gmail.com"
+      ]
+    },
+    {
+      "name": "Dr. Ricardo Freitas",
+      "lines": [
+        "Coordenador científico do Serviço de Urologia do HAM"
+      ]
+    }
+  ]
+}

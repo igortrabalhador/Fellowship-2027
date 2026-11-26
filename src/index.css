@@ -1,0 +1,511 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: var(--navy-deep);
+    color: var(--text-strong);
+    font-family: var(--font);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--navy-deep);
+    color: var(--text-strong);
+    font-family: var(--font);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    overflow-x: clip;
+  }
+
+  /* antislop R-39: explicit pointer affordance in base layer */
+  a[href],
+  button:not(:disabled),
+  summary,
+  select:not(:disabled),
+  label[for],
+  input[type='checkbox']:not(:disabled),
+  input[type='radio']:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  [role='tab']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+
+  /* Prevent mobile 300ms tap delay and blue highlight flash */
+  a,
+  button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: var(--blue);
+    color: var(--navy-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--blue-text);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Offset anchor jumps so sticky floating header never covers headings */
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+}
+
+/* ---------- Grain overlay (soft film texture on gradient surfaces) ---------- */
+.surface-grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.surface-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  background-image: url('/assets/grao.png');
+  background-size: 512px 512px;
+  background-repeat: repeat;
+  opacity: 0.9;
+}
+
+.surface-toplight {
+  background: var(--bg-toplight);
+}
+
+.surface-reference {
+  background: var(--bg-reference);
+}
+
+.surface-reference-left {
+  background: var(--bg-reference-left);
+}
+
+.surface-deep {
+  background: var(--bg-deep);
+}
+
+.surface-mist-top {
+  background: var(--bg-mist-top);
+}
+
+/* ---------- Editorial container (equal left/right gutters) ---------- */
+.editorial-wrap {
+  width: 100%;
+  max-width: calc(var(--maxw) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  position: relative;
+  z-index: 10;
+}
+
+/* ---------- Typography system (Archivo variable axes) ---------- */
+.type-eyebrow {
+  margin: 0;
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  font-stretch: 112%;
+  font-variation-settings: 'wdth' 112, 'wght' 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue-text);
+}
+
+.type-eyebrow-xl {
+  font-size: var(--fs-eyebrow-xl);
+  font-weight: 600;
+  font-stretch: 112%;
+  font-variation-settings: 'wdth' 112, 'wght' 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue-text);
+}
+
+.type-eyebrow-mist {
+  color: var(--blue-deep);
+}
+
+.type-display {
+  margin: 0;
+  font-weight: var(--display-weight);
+  font-stretch: var(--display-stretch);
+  font-variation-settings: 'wdth' 125, 'wght' 500;
+  letter-spacing: var(--display-tracking);
+  line-height: var(--display-leading);
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.type-display-xl {
+  font-size: var(--fs-display-xl);
+}
+
+.type-display-l {
+  font-size: var(--fs-display-l);
+}
+
+.type-date-giant {
+  margin: 0;
+  font-size: var(--fs-date-giant);
+  font-weight: 500;
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125, 'wght' 500;
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+  color: var(--navy);
+}
+
+.type-lead {
+  margin: 0;
+  font-size: var(--fs-lead);
+  font-weight: 300;
+  font-variation-settings: 'wdth' 100, 'wght' 350;
+  line-height: 1.18;
+  color: #f2f4f8;
+}
+
+.type-body {
+  margin: 0;
+  font-size: var(--fs-body);
+  font-weight: 350;
+  font-variation-settings: 'wdth' 100, 'wght' 380;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+.type-value {
+  margin: 0;
+  font-size: var(--fs-display-m);
+  font-weight: 500;
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125, 'wght' 550;
+  letter-spacing: -0.012em;
+  line-height: 1.05;
+  color: var(--blue-text);
+}
+
+.type-label {
+  margin: 0;
+  font-size: var(--fs-label);
+  font-weight: 600;
+  font-stretch: 110%;
+  font-variation-settings: 'wdth' 110, 'wght' 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue-label);
+}
+
+/* ---------- Signature brand components ---------- */
+.vagas-panel {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.8vw, 32px);
+  padding: clamp(18px, 2vw, 24px) clamp(20px, 2.8vw, 32px);
+  border-radius: var(--radius-panel);
+  color: var(--navy-ink);
+  background: linear-gradient(100deg, var(--blue) 0%, var(--blue-light) 100%);
+}
+
+.vagas-panel__count {
+  margin: 0;
+  flex-shrink: 0;
+  font-size: clamp(1.65rem, 2.8vw, 2.65rem);
+  font-weight: 600;
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125, 'wght' 600;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+}
+
+.vagas-panel__divider {
+  align-self: stretch;
+  width: 1.5px;
+  background: rgba(11, 28, 54, 0.34);
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .vagas-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 20px;
+  }
+
+  .vagas-panel__divider {
+    display: none;
+  }
+}
+
+/* Primary CTA pill */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background-color: var(--blue-light);
+  color: var(--navy-ink);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+  font-stretch: 114%;
+  font-variation-settings: 'wdth' 114, 'wght' 600;
+  letter-spacing: -0.005em;
+  line-height: 1;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: transform 160ms var(--ease-out), background-color 180ms ease, box-shadow 200ms var(--ease-out);
+}
+
+.btn-cta:active {
+  transform: scale(0.97);
+}
+
+/* Secondary pill with blue hairline border */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 13px 24px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(108, 182, 214, 0.88);
+  background-color: rgba(15, 35, 64, 0.28);
+  color: #ffffff;
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  font-weight: 500;
+  font-stretch: 106%;
+  font-variation-settings: 'wdth' 106, 'wght' 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-out), background-color 180ms ease, border-color 180ms ease;
+}
+
+.btn-pill:active {
+  transform: scale(0.97);
+}
+
+.btn-arrow {
+  display: inline-flex;
+  transition: transform 180ms var(--ease-out);
+}
+
+/* Hover strictly gated to fine pointer devices (prevents sticky hover on phones) */
+@media (hover: hover) and (pointer: fine) {
+  .btn-cta:hover {
+    background-color: var(--blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(5, 14, 30, 0.4);
+  }
+
+  .btn-cta:active {
+    transform: scale(0.97);
+  }
+
+  .btn-cta:hover .btn-arrow,
+  .btn-pill:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  .btn-pill:hover {
+    background-color: rgba(70, 154, 187, 0.2);
+    border-color: #8cc4de;
+    transform: translateY(-1px);
+  }
+
+  .btn-pill:active {
+    transform: scale(0.97);
+  }
+
+  .editorial-link:hover {
+    color: var(--blue-label);
+  }
+}
+
+.editorial-link {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--blue-text);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  transition: color 180ms ease;
+}
+
+/* ---------- Apple HIG Floating Translucent Chrome (Dose cap: Header + Mobile bar) ---------- */
+.chrome-glass {
+  background: rgba(11, 26, 50, 0.72);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(140, 196, 222, 0.18);
+}
+
+.chrome-glass-bottom {
+  background: rgba(10, 23, 45, 0.86);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-top: 1px solid rgba(140, 196, 222, 0.24);
+}
+
+/* ---------- Smooth GPU-friendly Accordion (CSS grid rows) ---------- */
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 240ms var(--ease-out), opacity 200ms ease;
+  opacity: 0;
+}
+
+.accordion-panel[data-open='true'] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.accordion-panel__inner {
+  overflow: hidden;
+}
+
+/* ---------- Hero entrance (plays once on mount, non-blocking) ---------- */
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  animation: heroEnter 520ms var(--ease-out) both;
+}
+
+.hero-enter-d1 {
+  animation-delay: 55ms;
+}
+
+.hero-enter-d2 {
+  animation-delay: 115ms;
+}
+
+.hero-enter-d3 {
+  animation-delay: 170ms;
+}
+
+.hero-enter-d4 {
+  animation-delay: 230ms;
+}
+
+/* ---------- Accessibility media queries (Apple HIG §14 & WCAG) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-enter,
+  .hero-enter-d1,
+  .hero-enter-d2,
+  .hero-enter-d3,
+  .hero-enter-d4 {
+    animation: heroFadeReduced 200ms ease both;
+    animation-delay: 0ms;
+  }
+
+  .btn-cta,
+  .btn-pill,
+  .btn-arrow,
+  .accordion-panel {
+    transition-duration: 120ms;
+    transition-property: opacity, background-color, border-color, color;
+  }
+
+  .btn-cta:active,
+  .btn-pill:active,
+  .btn-cta:hover,
+  .btn-pill:hover {
+    transform: none !important;
+  }
+}
+
+@keyframes heroFadeReduced {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .chrome-glass,
+  .chrome-glass-bottom {
+    background: #0a172d;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --rule: rgba(255, 255, 255, 0.55);
+    --rule-blue: rgba(140, 196, 222, 0.8);
+    --text-body: #ffffff;
+  }
+
+  .chrome-glass,
+  .chrome-glass-bottom {
+    background: #0a172d;
+    border-color: #8cc4de;
+  }
+}
+
+/* ---------- Print stylesheet for official Edital printing ---------- */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0b1c36 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .edital-print-surface {
+    position: static !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #0b1c36 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .edital-print-surface * {
+    color: #0b1c36 !important;
+    border-color: #cbd5e1 !important;
+  }
+}

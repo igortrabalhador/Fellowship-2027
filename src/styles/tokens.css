@@ -1,0 +1,103 @@
+/* =========================================================
+   Fellow HAM 2027 · tokens do estilo visual (versão 2)
+   Paleta: azul marinho, cinza, branco e azul claro (#469ABB).
+   ========================================================= */
+
+:root {
+  /* ---------- Cor ---------- */
+  --navy: #0f2340;
+  --navy-deep: #0a172d;
+  --navy-ink: #0b1c36;
+  --navy-mid: #142a4c;
+  --navy-soft: #1e3052;
+
+  --blue: #469abb;
+  --blue-light: #5caaca;
+  --blue-hover: #6bb4d2;
+  --blue-text: #6cb6d6;
+  --blue-label: #8cc4de;
+  --blue-deep: #1a5a79;
+
+  --gray: #787878;
+  --gray-mid: #5e636b;
+  --gray-light: #9a9b9e;
+  --mist: #d4d5d7;
+  --white-mist: #f0f0f1;
+
+  --text-strong: #ffffff;
+  --text-body: #e6e8eb;
+  --text-soft: #dee1e5;
+  --text-meta: #e2e4e7;
+  --rule: rgba(255, 255, 255, 0.24);
+  --rule-strong: rgba(255, 255, 255, 0.34);
+  --rule-blue: rgba(108, 182, 214, 0.45);
+
+  /* ---------- Tipografia (Archivo variável) ---------- */
+  --font: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --display-stretch: 125%;
+  --display-weight: 500;
+  --display-tracking: -0.015em;
+  --display-leading: 0.96;
+
+  --fs-display-xl: clamp(1.85rem, 4.2vw, 4.05rem);
+  --fs-display-l: clamp(1.85rem, 4.1vw, 3.85rem);
+  --fs-display-m: clamp(1.45rem, 2.7vw, 2.65rem);
+  --fs-date-giant: clamp(3.1rem, 9vw, 7rem);
+  --fs-lead: clamp(1.125rem, 1.9vw, 1.65rem);
+  --fs-body: clamp(1rem, 1.15vw, 1.18rem);
+  --fs-eyebrow: clamp(0.75rem, 0.92vw, 0.875rem);
+  --fs-eyebrow-xl: clamp(0.8125rem, 1.15vw, 1.05rem);
+  --fs-label: 0.75rem;
+
+  /* ---------- Forma e espaço ---------- */
+  --radius-panel: 22px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+  --gutter: clamp(20px, 6.5vw, 88px);
+  --maxw: 1200px;
+
+  /* ---------- Motion (Emil Kowalski & Apple HIG tokens) ---------- */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* ---------- Fundos assinados (degradê + névoa direcional) ---------- */
+  /* Ajustados para garantir contraste WCAG AA (>= 9:1) sob toda área de texto
+     enquanto preservam o respiro luminoso de névoa no canto inferior. */
+
+  --bg-reference:
+    radial-gradient(78% 24% at 88% 92%, rgba(235, 237, 240, 0.78) 0%, rgba(205, 210, 216, 0.52) 34%, rgba(205, 210, 216, 0) 74%),
+    radial-gradient(70% 24% at 64% 82%, rgba(70, 154, 187, 0.56) 0%, rgba(70, 154, 187, 0) 100%),
+    radial-gradient(54% 20% at -4% 94%, rgba(112, 118, 128, 0.45) 0%, rgba(112, 118, 128, 0) 100%),
+    radial-gradient(90% 24% at 38% 70%, rgba(10, 24, 46, 0.92) 0%, rgba(10, 24, 46, 0) 100%),
+    radial-gradient(48% 24% at 98% 18%, rgba(70, 154, 187, 0.42) 0%, rgba(70, 154, 187, 0) 100%),
+    linear-gradient(180deg, #0f2340 0%, #122848 50%, #1a3153 74%, #304561 88%, #142a4a 98%, #0f2340 100%);
+
+  --bg-reference-left:
+    radial-gradient(78% 24% at 12% 92%, rgba(235, 237, 240, 0.78) 0%, rgba(205, 210, 216, 0.52) 34%, rgba(205, 210, 216, 0) 74%),
+    radial-gradient(70% 24% at 36% 82%, rgba(70, 154, 187, 0.56) 0%, rgba(70, 154, 187, 0) 100%),
+    radial-gradient(54% 20% at 104% 94%, rgba(112, 118, 128, 0.45) 0%, rgba(112, 118, 128, 0) 100%),
+    radial-gradient(90% 24% at 62% 70%, rgba(10, 24, 46, 0.92) 0%, rgba(10, 24, 46, 0) 100%),
+    radial-gradient(48% 24% at 2% 18%, rgba(70, 154, 187, 0.42) 0%, rgba(70, 154, 187, 0) 100%),
+    linear-gradient(180deg, #0f2340 0%, #122848 50%, #1a3153 74%, #304561 88%, #142a4a 98%, #0f2340 100%);
+
+  --bg-toplight:
+    radial-gradient(76% 34% at -2% -4%, rgba(236, 237, 238, 0.72) 0%, rgba(196, 198, 201, 0.42) 26%, rgba(130, 132, 136, 0.14) 56%, rgba(130, 132, 136, 0) 100%),
+    radial-gradient(62% 34% at 84% 12%, rgba(70, 154, 187, 0.56) 0%, rgba(70, 154, 187, 0) 100%),
+    radial-gradient(70% 24% at 30% 72%, rgba(70, 154, 187, 0.24) 0%, rgba(70, 154, 187, 0) 100%),
+    radial-gradient(90% 28% at 54% 44%, rgba(9, 22, 44, 0.78) 0%, rgba(9, 22, 44, 0) 100%),
+    linear-gradient(180deg, #1a2d4e 0%, #132746 30%, #0f2240 60%, #0b1b34 86%, #0a172d 100%);
+
+  --bg-deep:
+    radial-gradient(62% 40% at 80% 26%, rgba(70, 154, 187, 0.52) 0%, rgba(70, 154, 187, 0) 100%),
+    radial-gradient(46% 28% at -6% 92%, rgba(120, 120, 120, 0.34) 0%, rgba(120, 120, 120, 0) 100%),
+    radial-gradient(88% 24% at 40% 72%, rgba(8, 20, 40, 0.82) 0%, rgba(8, 20, 40, 0) 100%),
+    linear-gradient(180deg, #152a4b 0%, #112442 42%, #0d1e39 76%, #0a172d 100%);
+
+  --bg-mist-top:
+    radial-gradient(72% 30% at 96% 0%, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 0) 100%),
+    radial-gradient(95% 18% at 72% 42%, rgba(70, 154, 187, 0.72) 0%, rgba(70, 154, 187, 0) 100%),
+    radial-gradient(120% 24% at 30% 54%, rgba(10, 24, 46, 0.84) 0%, rgba(10, 24, 46, 0) 100%),
+    radial-gradient(50% 18% at -6% 32%, rgba(170, 171, 173, 0.65) 0%, rgba(170, 171, 173, 0) 100%),
+    linear-gradient(178deg, #e9eaeb 0%, #dedfe0 20%, #c8c9cb 33%, #7c8591 42%, #192f53 51%, #122646 65%, #0d1e3a 84%, #0a172d 100%);
+}

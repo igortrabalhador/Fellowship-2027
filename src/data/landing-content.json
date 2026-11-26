@@ -1,0 +1,284 @@
+{
+  "config": {
+    "domain": "fellowham.com.br",
+    "enrollUrl": "https://www.lbcc.org.br",
+    "editalDownloadUrl": "/edital/Edital_Fellowship_Uro_Oncologia_HAM_2027.doc",
+    "editalDate": "07/11/2026",
+    "showVideo": false,
+    "videoUrl": "",
+    "showMedCall": true,
+    "showCoordination": true,
+    "showLegalFooter": true,
+    "analytics": {
+      "eventName": "inscricao_click",
+      "beaconEndpoint": ""
+    }
+  },
+  "navigation": {
+    "brand": "FELLOWSHIP HAM 2027",
+    "links": [
+      { "id": "programa", "label": "O programa" },
+      { "id": "rotina", "label": "Rotina" },
+      { "id": "inscricao", "label": "Como se inscrever" },
+      { "id": "perguntas", "label": "Perguntas" }
+    ],
+    "editalLabel": "Edital",
+    "ctaLabel": "Edital e inscrição"
+  },
+  "hero": {
+    "eyebrow": "FELLOWSHIP · PROCESSO SELETIVO 2027",
+    "title": "Fellowship em Uro-oncologia e Cirurgia Robótica",
+    "subtitle": "No Serviço de Urologia do Hospital Aristides Maltez, em Salvador. 2 vagas para urologistas.",
+    "vacanciesLabel": "2 VAGAS",
+    "chips": [
+      "Inscrições até 18/02/2027",
+      "Entrevista on-line em 19/02",
+      "Início em 01/03/2027"
+    ],
+    "primaryCta": "Edital e inscrição",
+    "editalCta": "Ler edital completo",
+    "videoCta": "Assistir ao vídeo"
+  },
+  "video": {
+    "eyebrow": "APRESENTAÇÃO",
+    "title": "Conheça o programa por quem faz"
+  },
+  "program": {
+    "id": "programa",
+    "eyebrow": "O PROGRAMA · 1 ANO · 1.200 HORAS",
+    "lead": "Um ano dedicado à",
+    "title": "uro-oncologia",
+    "fullTitle": "Um ano dedicado à uro-oncologia",
+    "text": "Treinamento em serviço no SUS, de referência e alto volume, exclusivo em uro-oncologia, com supervisão contínua de preceptores. Programa de 1 ano e 1.200 horas.",
+    "cards": [
+      {
+        "id": "centro-cirurgico",
+        "tag": "ROTINA CIRÚRGICA",
+        "title": "Centro cirúrgico",
+        "metric": "4 turnos",
+        "text": "4 turnos por semana, com participação progressiva como cirurgião principal."
+      },
+      {
+        "id": "cirurgia-robotica",
+        "tag": "INTERCÂMBIO ROBÓTICO",
+        "title": "Cirurgia robótica",
+        "metric": "Intuitive",
+        "text": "Certificação pela Intuitive, por intercâmbio com hospitais da rede privada com plataforma robótica. No mês em que está escalado na robótica, o fellow participa de todas as cirurgias agendadas."
+      },
+      {
+        "id": "ambulatorio-enfermaria",
+        "tag": "ASSISTÊNCIA CLÍNICA",
+        "title": "Ambulatório e enfermaria",
+        "metric": "Diário",
+        "text": "Primeira consulta, cistoscopia e revisões clínicas e cirúrgicas, com acompanhamento diário dos internados."
+      },
+      {
+        "id": "pesquisa",
+        "tag": "PRODUÇÃO CIENTÍFICA",
+        "title": "Pesquisa",
+        "metric": "NEPU",
+        "text": "Núcleo de Estudos e Pesquisa em Uro-Oncologia (NEPU): 3 projetos aprovados no CEP (bexiga, pênis e próstata), Genoma Brasil (8 centros no país) e VigiaSUS. Mestrado e doutorado possíveis, conforme o interesse do aluno."
+      }
+    ]
+  },
+  "routine": {
+    "id": "rotina",
+    "eyebrow": "FELLOWSHIP 2027 · ROTINA",
+    "title": "Como é a semana",
+    "rows": [
+      {
+        "value": "4 turnos",
+        "area": "Centro cirúrgico",
+        "description": "4 turnos por semana",
+        "hours": "24h"
+      },
+      {
+        "value": "3 turnos",
+        "area": "Ambulatório e pesquisa",
+        "description": "3 turnos por semana",
+        "hours": "12h"
+      },
+      {
+        "value": "Diária",
+        "area": "Enfermaria",
+        "description": "Acompanhamento diário, com escala em fins de semana e feriados e sobreaviso de urgência",
+        "hours": "4h"
+      }
+    ],
+    "meetingsTitle": "Reuniões científicas",
+    "meetings": [
+      {
+        "value": "Seg · 19h",
+        "description": "Segunda, 19h, presencial: casos clínicos e artigos científicos em uro-oncologia e urologia geral."
+      },
+      {
+        "value": "Ter · 19h",
+        "description": "Terça, 19h, presencial, on-line ou híbrida: casos clínicos com fellows, residentes e acadêmicos."
+      }
+    ],
+    "note": "Férias: 30 dias, em até 2 períodos de 15."
+  },
+  "curriculum": {
+    "id": "programa-teorico",
+    "eyebrow": "ATIVIDADE TEÓRICA · 15 TEMAS",
+    "title": "Programa teórico",
+    "items": [
+      "Diagnóstico do câncer de próstata (rastreio e biópsia)",
+      "Vigilância ativa no câncer de próstata",
+      "Aspectos cirúrgicos do tratamento do câncer de próstata",
+      "Tumor de próstata metastático",
+      "Radioterapia em uro-oncologia",
+      "Tumor do rim",
+      "Tumor de pênis",
+      "Tumor de bexiga não músculo invasivo",
+      "Tumor de bexiga músculo invasivo",
+      "Preservação vesical no tumor de bexiga (trimodalidade)",
+      "Nódulos adrenais",
+      "Tumores de testículo",
+      "Laparoscopia em uro-oncologia",
+      "Tumores uroteliais do trato superior",
+      "Cirurgia robótica urológica"
+    ]
+  },
+  "howToApply": {
+    "id": "inscricao",
+    "eyebrow": "INSCRIÇÕES · PROCESSO SELETIVO",
+    "title": "Como se inscrever",
+    "eligibilityLabel": "Quem pode",
+    "eligibility": "Exclusivo para médicos urologistas, com residência em Urologia ou comprovante de estar no último ano. Candidatos estrangeiros apresentam os mesmos documentos e só atuam no HAM, sempre sob supervisão, sem atividade remunerada como médico fora da instituição.",
+    "documentsLabel": "Documentos",
+    "documentsHelper": "Marque os documentos já separados para conferir sua pasta antes de acessar a ficha.",
+    "documents": [
+      "Currículo",
+      "RG e CPF",
+      "CRM (do estado ou do país de origem, se não for CRM-BA)",
+      "Diploma ou certificado de Urologia",
+      "Comprovante de pagamento da taxa de inscrição"
+    ],
+    "feeLabel": "Taxa de inscrição",
+    "fee": "Valor da taxa de inscrição na ficha de inscrição.",
+    "whereLabel": "Onde",
+    "where": "Pelo site www.lbcc.org.br, na biblioteca do Hospital Aristides Maltez (Av. Dom João VI, 332, Brotas, Salvador), das 9h às 15h30, ou pelo telefone (71) 9 9917 1679.",
+    "phoneDisplay": "(71) 9 9917 1679",
+    "phoneHref": "tel:+5571999171679",
+    "siteDisplay": "www.lbcc.org.br",
+    "buttonLabel": "Edital e inscrição",
+    "editalButtonLabel": "Ler edital completo"
+  },
+  "calendar": {
+    "id": "calendario",
+    "eyebrow": "FELLOWSHIP 2027 · DATAS",
+    "title": "Calendário",
+    "steps": [
+      {
+        "date": "28/11/2026",
+        "label": "Abertura das inscrições"
+      },
+      {
+        "date": "18/02/2027",
+        "label": "Fim das inscrições"
+      },
+      {
+        "date": "19/02/2027, 19h",
+        "label": "Entrevista on-line (link por Zoom enviado até 24h antes)"
+      },
+      {
+        "date": "22/02/2027",
+        "label": "Resultado, divulgado no site do hospital"
+      },
+      {
+        "date": "23 a 26/02/2027",
+        "label": "Matrícula"
+      },
+      {
+        "date": "01/03/2027, 7h",
+        "label": "Início das atividades"
+      }
+    ],
+    "note": "Seleção: análise de currículo (peso 4) e entrevista (peso 6).",
+    "weights": [
+      { "label": "Análise de currículo", "weight": "Peso 4", "percent": 40 },
+      { "label": "Entrevista on-line", "weight": "Peso 6", "percent": 60 }
+    ]
+  },
+  "investment": {
+    "id": "investimento",
+    "eyebrow": "TAXA E CERTIFICAÇÃO",
+    "title": "Investimento",
+    "amount": "R$ 800",
+    "period": "por mês, durante 1 ano",
+    "text": "Taxa de administração de R$ 800 por mês, durante 1 ano, paga ao Departamento de Ensino e Pesquisa do hospital. O certificado é emitido pelo Hospital Aristides Maltez ao final do programa, após a quitação."
+  },
+  "coordination": {
+    "id": "coordenacao",
+    "eyebrow": "SERVIÇO DE UROLOGIA · HAM",
+    "title": "Quem coordena",
+    "people": [
+      {
+        "name": "Dr. Augusto Modesto de Souza Neto",
+        "role": "Chefe do Serviço de Urologia do Hospital Aristides Maltez e coordenador do fellowship"
+      },
+      {
+        "name": "Dr. Ricardo Freitas",
+        "role": "Coordenador científico do Serviço de Urologia do Hospital Aristides Maltez"
+      }
+    ]
+  },
+  "faq": {
+    "id": "perguntas",
+    "eyebrow": "DÚVIDAS DO PROCESSO SELETIVO",
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "question": "Quantas vagas são oferecidas?",
+        "answer": "São 2 vagas por ano."
+      },
+      {
+        "question": "Quem pode se inscrever?",
+        "answer": "Médicos urologistas, com residência em Urologia ou comprovante de estar cursando o último ano."
+      },
+      {
+        "question": "A seleção é presencial?",
+        "answer": "Não. A seleção é on-line: análise de currículo e entrevista por Zoom, em 19/02/2027, a partir das 19h."
+      },
+      {
+        "question": "Candidato estrangeiro pode se inscrever?",
+        "answer": "Pode, com os mesmos documentos. O selecionado só poderá atuar no Hospital Aristides Maltez, sempre sob supervisão, e nunca exercer atividade remunerada como médico fora da instituição."
+      },
+      {
+        "question": "Quando o programa começa e quanto dura?",
+        "answer": "Começa em 01/03/2027, às 7h, e dura 1 ano, com carga mínima de 1.200 horas."
+      },
+      {
+        "question": "Existe cobrança?",
+        "answer": "Há taxa de inscrição e uma taxa de administração de R$ 800 por mês, durante o programa."
+      },
+      {
+        "question": "Posso fazer mestrado ou doutorado durante o fellowship?",
+        "answer": "É possível, conforme o interesse do aluno, utilizando os dados dos estudos realizados no hospital."
+      }
+    ]
+  },
+  "closing": {
+    "id": "fechamento",
+    "eyebrow": "FELLOWSHIP 2027 · PROCESSO SELETIVO",
+    "lead": "Inscrições até",
+    "dateDisplay": "18/02/2027",
+    "fullTitle": "Inscrições até 18/02/2027",
+    "programName": "Fellowship em Uro-oncologia e Cirurgia Robótica",
+    "location": "Hospital Aristides Maltez, Salvador",
+    "buttonLabel": "Edital e inscrição",
+    "editalButtonLabel": "Ler edital completo",
+    "contactLabel": "Departamento de Ensino e Pesquisa:",
+    "phones": [
+      { "display": "(71) 3357-6812", "href": "tel:+557133576812" },
+      { "display": "(71) 9 9917 1679", "href": "tel:+5571999171679" }
+    ]
+  },
+  "footer": {
+    "realizacaoLabel": "Realização",
+    "patrocinioLabel": "Patrocínio",
+    "legal": "Dr. Augusto Modesto de Souza Neto · CRM-BA 13407 · RQE 10371",
+    "notice": "Informações conforme o edital de 07/11/2026. A inscrição é feita pelo Hospital Aristides Maltez."
+  }
+}
