@@ -6,81 +6,89 @@ export function ProgramSection() {
 
   return (
     <div id={program.id}>
-      {/* Part A: Surgical core + X-ray robotic arm edge bleed (--bg-deep) */}
-      <section className="surface-grain surface-deep relative overflow-hidden py-20 sm:py-28 lg:py-32">
-        {/* X-ray robotic arm emerging seamlessly from right edge */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-10 -right-12 sm:right-0 lg:right-4 w-[280px] sm:w-[400px] lg:w-[540px] max-w-[54vw] z-[2] opacity-40 sm:opacity-65 lg:opacity-85"
-        >
-          <img
-            src="assets/imagens/robo-raio-x-alpha.webp"
-            alt=""
-            width={1600}
-            height={2157}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-
+      {/* Part A: Solid architectural mist-white (#F2F3F5) + framed dark X-ray bay */}
+      <section className="surface-solid-light relative overflow-hidden py-20 sm:py-28 lg:py-32">
         <div className="editorial-wrap">
-          <div className="max-w-[700px]">
-            <p className="type-eyebrow mb-5">{program.eyebrow}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+            <div className="lg:col-span-7">
+              <p className="type-eyebrow text-[#1A5A79] mb-4">{program.eyebrow}</p>
 
-            <h2 className="m-0">
-              <span className="type-lead block mb-2 text-[#E6E8EB]">
-                {program.lead}
-              </span>
-              <span className="type-display type-display-l block text-white">
-                {program.title}
-              </span>
-            </h2>
-
-            <p className="type-body mt-7 max-w-[48ch] text-[18px] sm:text-[20px]">
-              {program.text}
-            </p>
-          </div>
-
-          {/* Hairline-ruled surgical core (matching Carrossel-04 editorial rhythm) */}
-          <div className="mt-14 sm:mt-16 max-w-[680px] flex flex-col gap-10">
-            <article className="pt-6 border-t border-white/25">
-              <div className="flex flex-wrap items-baseline justify-between gap-3 mb-3">
-                <p className="type-eyebrow">{surgicalRoom.tag}</p>
-                <span className="type-value text-[24px] sm:text-[32px]">
-                  {surgicalRoom.metric}
+              <h2 className="m-0">
+                <span className="type-lead block mb-2 text-[#243652]">
+                  {program.lead}
                 </span>
-              </div>
-              <h3
-                className="text-[22px] sm:text-[26px] font-medium text-white m-0 mb-2.5"
-                style={{ fontVariationSettings: "'wdth' 112, 'wght' 550" }}
-              >
-                {surgicalRoom.title}
-              </h3>
-              <p className="type-body max-w-[46ch]">{surgicalRoom.text}</p>
-            </article>
-
-            <article className="pt-6 border-t border-white/25">
-              <div className="flex flex-wrap items-baseline justify-between gap-3 mb-3">
-                <p className="type-eyebrow">{roboticSurgery.tag}</p>
-                <span className="type-value text-[24px] sm:text-[32px]">
-                  {roboticSurgery.metric}
+                <span className="type-display type-display-l block text-[#0F2340]">
+                  {program.title}
                 </span>
+              </h2>
+
+              <p className="mt-6 max-w-[48ch] text-[18px] sm:text-[20px] leading-[1.55] text-[#243652]">
+                {program.text}
+              </p>
+
+              {/* Hairline-ruled surgical core */}
+              <div className="mt-12 sm:mt-14 flex flex-col gap-9">
+                <article className="pt-6 border-t border-[#0F2340]/20">
+                  <div className="flex flex-wrap items-baseline justify-between gap-3 mb-2.5">
+                    <p className="type-eyebrow text-[#1A5A79]">{surgicalRoom.tag}</p>
+                    <span className="type-value text-[#1A5A79] text-[24px] sm:text-[32px]">
+                      {surgicalRoom.metric}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-[22px] sm:text-[25px] font-semibold text-[#0F2340] m-0 mb-2"
+                    style={{ fontVariationSettings: "'wdth' 112, 'wght' 600" }}
+                  >
+                    {surgicalRoom.title}
+                  </h3>
+                  <p className="m-0 max-w-[48ch] text-[16px] sm:text-[18px] leading-[1.55] text-[#243652]">
+                    {surgicalRoom.text}
+                  </p>
+                </article>
+
+                <article className="pt-6 border-t border-[#0F2340]/20">
+                  <div className="flex flex-wrap items-baseline justify-between gap-3 mb-2.5">
+                    <p className="type-eyebrow text-[#1A5A79]">{roboticSurgery.tag}</p>
+                    <span className="type-value text-[#1A5A79] text-[24px] sm:text-[32px]">
+                      {roboticSurgery.metric}
+                    </span>
+                  </div>
+                  <h3
+                    className="text-[22px] sm:text-[25px] font-semibold text-[#0F2340] m-0 mb-2"
+                    style={{ fontVariationSettings: "'wdth' 112, 'wght' 600" }}
+                  >
+                    {roboticSurgery.title}
+                  </h3>
+                  <p className="m-0 max-w-[50ch] text-[16px] sm:text-[18px] leading-[1.55] text-[#243652]">
+                    {roboticSurgery.text}
+                  </p>
+                </article>
               </div>
-              <h3
-                className="text-[22px] sm:text-[26px] font-medium text-white m-0 mb-2.5"
-                style={{ fontVariationSettings: "'wdth' 112, 'wght' 550" }}
+            </div>
+
+            {/* Dark optical bay showcasing the X-ray robotic arm render */}
+            <div className="lg:col-span-5 lg:sticky lg:top-24">
+              <div
+                aria-hidden="true"
+                className="surface-grain surface-deep relative rounded-[22px] overflow-hidden min-h-[340px] sm:min-h-[460px] lg:min-h-[580px] flex items-center justify-end border border-[#0F2340]/15"
               >
-                {roboticSurgery.title}
-              </h3>
-              <p className="type-body max-w-[48ch]">{roboticSurgery.text}</p>
-            </article>
+                <img
+                  src="assets/imagens/robo-raio-x-alpha.webp"
+                  alt=""
+                  width={1600}
+                  height={2157}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-[92%] max-w-[460px] h-auto object-contain ml-auto -mr-4 -mt-4"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Part B: Outpatient, Ward & NEPU Research (--bg-reference with bottom mist breathing space) */}
-      <section className="surface-grain surface-reference relative overflow-hidden pt-20 sm:pt-28 pb-36 sm:pb-48 lg:pb-56">
+      {/* Part B: Signature dark gradient + grain (--bg-reference) for Clinic & NEPU Research */}
+      <section className="surface-grain surface-reference relative overflow-hidden pt-20 sm:pt-28 pb-32 sm:pb-44 lg:pb-48">
         <div className="editorial-wrap">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
             {/* Ambulatório e enfermaria */}

@@ -12,67 +12,57 @@ export function InvestmentFaqSection() {
 
   return (
     <>
-      {/* Blocks 08 & 09: Investimento e Quem coordena (--bg-deep) */}
+      {/* Blocks 08 & 09: Solid Brand Light Blue (#5CAACA) with Deep Navy ink (#0B1C36, 6.53:1) */}
       <section
         id={investment.id}
-        className="surface-grain surface-deep relative overflow-hidden py-20 sm:py-28 lg:py-32"
+        className="surface-solid-blue relative overflow-hidden py-20 sm:py-28 lg:py-32"
       >
-        {/* Subtle robotic arm entering upper-right corner */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-6 -right-10 w-[300px] sm:w-[440px] lg:w-[540px] max-w-[55vw] z-[2] opacity-25 sm:opacity-45"
-        >
-          <img
-            src="assets/imagens/bracos-roboticos-alpha.webp"
-            alt=""
-            width={2000}
-            height={1521}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-
         <div className="editorial-wrap">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-start">
             {/* Block 08: Investimento */}
             <div className={config.showCoordination ? 'lg:col-span-6' : 'lg:col-span-8'}>
-              <p className="type-eyebrow mb-4">{investment.eyebrow}</p>
-              <h2 className="type-display type-display-l text-white">
+              <p className="type-eyebrow text-[#0B1C36] mb-4">{investment.eyebrow}</p>
+              <h2 className="type-display type-display-l text-[#0B1C36]">
                 {investment.title}
               </h2>
 
-              <div className="mt-9 pt-7 border-t border-white/25">
+              <div className="mt-9 pt-7 border-t border-[#0B1C36]/25">
                 <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mb-5">
-                  <p className="type-value text-[42px] sm:text-[56px]">
+                  <p className="type-value text-[#0B1C36] text-[44px] sm:text-[60px]">
                     {investment.amount}
                   </p>
-                  <span className="text-[17px] sm:text-[19px] text-[#DEE1E5]">
+                  <span className="text-[17px] sm:text-[19px] font-semibold text-[#0F2340]">
                     {investment.period}
                   </span>
                 </div>
-                <p className="type-body max-w-[46ch]">{investment.text}</p>
+                <p className="m-0 max-w-[46ch] text-[16px] sm:text-[18px] leading-[1.55] font-medium text-[#0B1C36]">
+                  {investment.text}
+                </p>
               </div>
             </div>
 
             {/* Block 09: Quem coordena (toggleable via config.showCoordination) */}
             {config.showCoordination && (
               <div id={coordination.id} className="lg:col-span-6">
-                <p className="type-eyebrow mb-4">{coordination.eyebrow}</p>
-                <h2 className="type-display type-display-l text-white">
+                <p className="type-eyebrow text-[#0B1C36] mb-4">
+                  {coordination.eyebrow}
+                </p>
+                <h2 className="type-display type-display-l text-[#0B1C36]">
                   {coordination.title}
                 </h2>
 
-                <div className="mt-9 flex flex-col divide-y divide-white/25 border-t border-b border-white/25">
+                <div className="mt-9 flex flex-col divide-y divide-[#0B1C36]/25 border-t border-b border-[#0B1C36]/25">
                   {coordination.people.map((person) => (
                     <article key={person.name} className="py-6">
                       <h3
-                        className="text-[20px] sm:text-[23px] font-semibold text-white m-0 mb-2"
-                        style={{ fontVariationSettings: "'wdth' 110, 'wght' 600" }}
+                        className="text-[20px] sm:text-[23px] font-semibold text-[#0B1C36] m-0 mb-2"
+                        style={{ fontVariationSettings: "'wdth' 110, 'wght' 650" }}
                       >
                         {person.name}
                       </h3>
-                      <p className="type-body max-w-[44ch]">{person.role}</p>
+                      <p className="m-0 max-w-[44ch] text-[16px] sm:text-[17px] leading-[1.5] font-medium text-[#0F2340]">
+                        {person.role}
+                      </p>
                     </article>
                   ))}
                 </div>
@@ -82,10 +72,10 @@ export function InvestmentFaqSection() {
         </div>
       </section>
 
-      {/* Block 10: Perguntas frequentes (--bg-reference) */}
+      {/* Block 10: Perguntas frequentes: Solid Institutional Navy (#0F2340) */}
       <section
         id={faq.id}
-        className="surface-grain surface-reference relative overflow-hidden pt-20 sm:pt-28 pb-36 sm:pb-48 lg:pb-56"
+        className="surface-solid-navy relative overflow-hidden py-20 sm:py-28 lg:py-32"
       >
         <div className="editorial-wrap">
           <p className="type-eyebrow mb-4">{faq.eyebrow}</p>

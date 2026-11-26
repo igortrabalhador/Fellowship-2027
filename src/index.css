@@ -68,6 +68,7 @@
   }
 }
 
+@layer components {
 /* ---------- Grain overlay (soft film texture on gradient surfaces) ---------- */
 .surface-grain {
   position: relative;
@@ -104,6 +105,37 @@
 
 .surface-mist-top {
   background: var(--bg-mist-top);
+}
+
+/* ---------- Solid architectural section surfaces (clear visual rhythm) ---------- */
+.surface-solid-light {
+  background-color: #f2f3f5;
+  color: var(--navy);
+}
+
+.surface-solid-white {
+  background-color: #ffffff;
+  color: var(--navy);
+}
+
+.surface-solid-slate {
+  background-color: #e5e9ee;
+  color: var(--navy);
+}
+
+.surface-solid-deep {
+  background-color: var(--navy-deep);
+  color: var(--text-strong);
+}
+
+.surface-solid-navy {
+  background-color: var(--navy);
+  color: var(--text-strong);
+}
+
+.surface-solid-blue {
+  background-color: var(--blue-light);
+  color: var(--navy-ink);
 }
 
 /* ---------- Editorial container (equal left/right gutters) ---------- */
@@ -210,6 +242,7 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--blue-label);
+}
 }
 
 /* ---------- Signature brand components ---------- */
@@ -355,12 +388,93 @@
   transition: color 180ms ease;
 }
 
+.editorial-link-light {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  transition: color 180ms ease;
+}
+
+.btn-cta-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background-color: var(--navy);
+  color: #ffffff;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+  font-stretch: 114%;
+  font-variation-settings: 'wdth' 114, 'wght' 600;
+  letter-spacing: -0.005em;
+  line-height: 1;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: transform 160ms var(--ease-out), background-color 180ms ease, box-shadow 200ms var(--ease-out);
+}
+
+.btn-cta-dark:active {
+  transform: scale(0.97);
+}
+
+.btn-pill-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 13px 24px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--navy);
+  background-color: transparent;
+  color: var(--navy);
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  font-weight: 600;
+  font-stretch: 106%;
+  font-variation-settings: 'wdth' 106, 'wght' 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-out), background-color 180ms ease;
+}
+
+.btn-pill-light:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-cta-dark:hover {
+    background-color: var(--blue-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(15, 35, 64, 0.24);
+  }
+
+  .btn-cta-dark:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+
+  .btn-pill-light:hover {
+    background-color: rgba(15, 35, 64, 0.08);
+    transform: translateY(-1px);
+  }
+
+  .editorial-link-light:hover {
+    color: var(--blue-deep);
+  }
+}
+
 /* ---------- Apple HIG Floating Translucent Chrome (Dose cap: Header + Mobile bar) ---------- */
 .chrome-glass {
-  background: rgba(11, 26, 50, 0.72);
+  background: rgba(10, 23, 45, 0.86);
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
-  border-bottom: 1px solid rgba(140, 196, 222, 0.18);
+  border-bottom: 1px solid rgba(140, 196, 222, 0.22);
 }
 
 .chrome-glass-bottom {

@@ -30,46 +30,58 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
 
   return (
     <>
-      {/* Block 06: Como se inscrever (--bg-reference) */}
+      {/* Block 06: Como se inscrever: Solid cool grey-mist (#E5E9EE) */}
       <section
         id={howToApply.id}
-        className="surface-grain surface-reference relative overflow-hidden pt-20 sm:pt-28 pb-36 sm:pb-48 lg:pb-56"
+        className="surface-solid-slate relative overflow-hidden py-20 sm:py-28 lg:py-32"
       >
         <div className="editorial-wrap">
-          <p className="type-eyebrow mb-4">{howToApply.eyebrow}</p>
-          <h2 className="type-display type-display-l text-white max-w-[16ch]">
+          <p className="type-eyebrow text-[#1A5A79] mb-4">{howToApply.eyebrow}</p>
+          <h2 className="type-display type-display-l text-[#0F2340] max-w-[16ch]">
             {howToApply.title}
           </h2>
 
           <div className="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
             {/* Left column: eligibility, fee, channels */}
             <div className="lg:col-span-6 flex flex-col gap-9">
-              <div className="pt-6 border-t border-white/25">
-                <h3 className="type-eyebrow mb-3">{howToApply.eligibilityLabel}</h3>
-                <p className="type-body max-w-[48ch]">{howToApply.eligibility}</p>
+              <div className="pt-6 border-t border-[#0F2340]/20">
+                <h3 className="type-eyebrow text-[#1A5A79] mb-3">
+                  {howToApply.eligibilityLabel}
+                </h3>
+                <p className="m-0 max-w-[48ch] text-[16px] sm:text-[18px] leading-[1.55] text-[#243652]">
+                  {howToApply.eligibility}
+                </p>
               </div>
 
-              <div className="pt-6 border-t border-white/25">
-                <h3 className="type-eyebrow mb-3">{howToApply.feeLabel}</h3>
-                <p className="type-body max-w-[46ch]">{howToApply.fee}</p>
+              <div className="pt-6 border-t border-[#0F2340]/20">
+                <h3 className="type-eyebrow text-[#1A5A79] mb-3">
+                  {howToApply.feeLabel}
+                </h3>
+                <p className="m-0 max-w-[46ch] text-[16px] sm:text-[18px] leading-[1.55] text-[#243652]">
+                  {howToApply.fee}
+                </p>
               </div>
 
-              <div className="pt-6 border-t border-white/25">
-                <h3 className="type-eyebrow mb-3">{howToApply.whereLabel}</h3>
-                <p className="type-body max-w-[48ch]">{howToApply.where}</p>
+              <div className="pt-6 border-t border-[#0F2340]/20">
+                <h3 className="type-eyebrow text-[#1A5A79] mb-3">
+                  {howToApply.whereLabel}
+                </h3>
+                <p className="m-0 max-w-[48ch] text-[16px] sm:text-[18px] leading-[1.55] text-[#243652]">
+                  {howToApply.where}
+                </p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px]">
                   <a
                     href={config.enrollUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackEnrollClick('how_to_apply_site_link')}
-                    className="editorial-link inline-flex items-center min-h-[44px]"
+                    className="editorial-link-light inline-flex items-center min-h-[44px]"
                   >
                     {howToApply.siteDisplay}
                   </a>
                   <a
                     href={howToApply.phoneHref}
-                    className="editorial-link inline-flex items-center min-h-[44px]"
+                    className="editorial-link-light inline-flex items-center min-h-[44px]"
                   >
                     {howToApply.phoneDisplay}
                   </a>
@@ -77,29 +89,31 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
               </div>
             </div>
 
-            {/* Right column: interactive session-only document checklist (no cookies, no form) */}
-            <div className="lg:col-span-6 pt-6 border-t border-white/25">
+            {/* Right column: crisp white document checklist panel */}
+            <div className="lg:col-span-6 rounded-[22px] bg-white p-6 sm:p-8 border border-[#0F2340]/12">
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                <h3 className="type-eyebrow">{howToApply.documentsLabel}</h3>
+                <h3 className="type-eyebrow text-[#1A5A79]">
+                  {howToApply.documentsLabel}
+                </h3>
                 <span
-                  className="text-[13px] font-semibold tracking-[0.06em] text-[#8CC4DE] tabular-nums"
+                  className="text-[13px] font-semibold tracking-[0.06em] text-[#1A5A79] tabular-nums"
                   aria-live="polite"
                 >
                   {checkedCount} de {totalDocs} separados
                 </span>
               </div>
 
-              <p className="text-[14px] text-[#DEE1E5] m-0 mb-4">
+              <p className="text-[14px] text-[#243652] m-0 mb-4">
                 {howToApply.documentsHelper}
               </p>
 
               {/* Progress hairline */}
               <div
                 aria-hidden="true"
-                className="h-[3px] w-full bg-white/15 rounded-full overflow-hidden mb-5"
+                className="h-[3px] w-full bg-[#0F2340]/12 rounded-full overflow-hidden mb-5"
               >
                 <div
-                  className="h-full bg-[#6CB6D6] origin-left transition-transform duration-200"
+                  className="h-full bg-[#1A5A79] origin-left transition-transform duration-200"
                   style={{
                     transform: `scaleX(${progressPct / 100})`,
                     transitionTimingFunction: 'var(--ease-out)',
@@ -107,7 +121,7 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
                 />
               </div>
 
-              <ul className="list-none m-0 p-0 flex flex-col divide-y divide-white/15 border-t border-b border-white/15">
+              <ul className="list-none m-0 p-0 flex flex-col divide-y divide-[#0F2340]/12 border-t border-b border-[#0F2340]/12">
                 {howToApply.documents.map((doc, idx) => {
                   const isChecked = Boolean(checkedDocs[idx]);
                   return (
@@ -117,21 +131,23 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
                         role="checkbox"
                         aria-checked={isChecked}
                         onClick={() => toggleDoc(idx)}
-                        className="w-full min-h-[52px] py-3.5 px-1 flex items-center gap-4 text-left bg-transparent border-0 text-white active:scale-[0.99] transition-transform duration-100"
+                        className="w-full min-h-[52px] py-3.5 px-1 flex items-center gap-4 text-left bg-transparent border-0 text-[#0F2340] active:scale-[0.99] transition-transform duration-100"
                       >
                         <span
                           aria-hidden="true"
                           className={`w-6 h-6 rounded-[6px] border flex items-center justify-center shrink-0 transition-[background-color,border-color,transform] duration-150 ${
                             isChecked
-                              ? 'bg-[#5CAACA] border-[#5CAACA] text-[#0B1C36]'
-                              : 'border-[#6CB6D6]/75 bg-[#0F2340]/40 text-transparent'
+                              ? 'bg-[#0F2340] border-[#0F2340] text-white'
+                              : 'border-[#1A5A79]/65 bg-[#F2F3F5] text-transparent'
                           }`}
                         >
                           <CheckIcon className="w-4 h-4" />
                         </span>
                         <span
                           className={`text-[16px] sm:text-[17px] leading-snug transition-colors duration-150 ${
-                            isChecked ? 'text-[#8CC4DE] line-through' : 'text-[#F0F2F5]'
+                            isChecked
+                              ? 'text-[#1A5A79] line-through'
+                              : 'text-[#0F2340] font-medium'
                           }`}
                         >
                           {doc}
@@ -142,13 +158,13 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
                 })}
               </ul>
 
-              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3.5">
+              <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3">
                 <a
                   href={config.enrollUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackEnrollClick('how_to_apply_cta')}
-                  className="btn-cta w-full sm:w-auto"
+                  className="btn-cta-dark w-full sm:w-auto"
                 >
                   <span>{howToApply.buttonLabel}</span>
                   <span className="btn-arrow">
@@ -159,9 +175,9 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
                 <button
                   type="button"
                   onClick={onOpenEdital}
-                  className="btn-pill w-full sm:w-auto"
+                  className="btn-pill-light w-full sm:w-auto"
                 >
-                  <DocumentIcon className="w-4 h-4 text-[#6CB6D6]" />
+                  <DocumentIcon className="w-4 h-4 text-[#1A5A79]" />
                   <span>{howToApply.editalButtonLabel}</span>
                 </button>
               </div>
@@ -170,10 +186,10 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
         </div>
       </section>
 
-      {/* Block 07: Calendário (--bg-reference-left, Dealt Scroll Moment #1) */}
+      {/* Block 07: Calendário: Signature dark gradient + grain (--bg-reference-left, Dealt Scroll Moment #1) */}
       <section
         id={calendar.id}
-        className="surface-grain surface-reference-left relative overflow-hidden pt-20 sm:pt-28 pb-36 sm:pb-48 lg:pb-56"
+        className="surface-grain surface-reference-left relative overflow-hidden pt-20 sm:pt-28 pb-32 sm:pb-44 lg:pb-48"
       >
         <div className="editorial-wrap">
           <p className="type-eyebrow mb-4">{calendar.eyebrow}</p>
@@ -203,7 +219,6 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
                 const isDeadline = index === 1;
                 return (
                   <li key={step.date} className="relative">
-                    {/* 24px node matching tokens.css / Carrossel-07 */}
                     <span
                       aria-hidden="true"
                       className={`absolute -left-12 sm:-left-16 top-1 w-6 h-6 rounded-full border-[1.5px] border-[#6CB6D6] flex items-center justify-center ${
