@@ -1,0 +1,17 @@
+{
+  "name": "Fellowship em Uro-oncologia e Cirurgia Robótica · HAM 2027",
+  "short_name": "Fellow HAM 2027",
+  "description": "Processo seletivo 2027 do Fellowship em Uro-oncologia e Cirurgia Robótica do Hospital Aristides Maltez, em Salvador (BA).",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0A172D",
+  "theme_color": "#0F2340",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
