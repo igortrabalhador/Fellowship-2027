@@ -1,4 +1,5 @@
 import content from '@/data/landing-content.json';
+import { getSafeBeaconUrl, getSafeExternalUrl } from '@/lib/security';
 
 declare global {
   interface Window {
@@ -9,15 +10,16 @@ declare global {
 
 /**
  * Cookie-less enrollment click tracking (event: inscricao_click).
- * Stores no cookies, touches no localStorage, and dispatches cleanly to
- * privacy-first analytics (Plausible, Umami, optional sendBeacon endpoint,
- * or a browser CustomEvent for verification).
+ * Stores no cookies, touches no localStorage, validates HTTPS destination URLs,
+ * and dispatches cleanly to privacy-first analytics (Plausible, Umami, optional
+ * HTTPS sendBeacon endpoint, or a browser CustomEvent for verification).
  */
 export function trackEnrollClick(source: string): void {
   const eventName = content.config.analytics.eventName || 'inscricao_click';
+  const safeDestination = getSafeExternalUrl(content.config.enrollUrl);
   const payload = {
     source,
-    destination: content.config.enrollUrl,
+    destination: safeDestination,
   };
 
   try {
@@ -29,7 +31,7 @@ export function trackEnrollClick(source: string): void {
       window.umami.track(eventName, payload);
     }
 
-    const endpoint = content.config.analytics.beaconEndpoint;
+    const endpoint = getSafeBeaconUrl(content.config.analytics.beaconEndpoint);
     if (endpoint && typeof navigator.sendBeacon === 'function') {
       const blob = new Blob([JSON.stringify({ event: eventName, ...payload })], {
         type: 'application/json',

@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useMotionTemplate, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import content from '@/data/landing-content.json';
 import { trackEnrollClick } from '@/lib/analytics';
+import { getSafeExternalUrl } from '@/lib/security';
 import { ArrowRightIcon, DocumentIcon } from './Icons';
 
 interface ClosingFooterSectionProps {
@@ -84,9 +85,10 @@ export function ClosingFooterSection({ onOpenEdital }: ClosingFooterSectionProps
 
           <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3.5 sm:gap-4">
             <a
-              href={config.enrollUrl}
+              href={getSafeExternalUrl(config.enrollUrl)}
               target="_blank"
               rel="noopener noreferrer"
+              referrerPolicy="strict-origin-when-cross-origin"
               onClick={() => trackEnrollClick('closing_primary')}
               className="btn-cta w-full sm:w-auto"
             >

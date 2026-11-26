@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
 import content from '@/data/landing-content.json';
 import { trackEnrollClick } from '@/lib/analytics';
+import { getSafeExternalUrl } from '@/lib/security';
 import { ArrowRightIcon, CheckIcon, DocumentIcon } from './Icons';
 
 interface ApplyCalendarSectionProps {
@@ -71,9 +72,10 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px]">
                   <a
-                    href={config.enrollUrl}
+                    href={getSafeExternalUrl(config.enrollUrl)}
                     target="_blank"
                     rel="noopener noreferrer"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     onClick={() => trackEnrollClick('how_to_apply_site_link')}
                     className="editorial-link-light inline-flex items-center min-h-[44px]"
                   >
@@ -160,9 +162,10 @@ export function ApplyCalendarSection({ onOpenEdital }: ApplyCalendarSectionProps
 
               <div className="mt-7 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3">
                 <a
-                  href={config.enrollUrl}
+                  href={getSafeExternalUrl(config.enrollUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   onClick={() => trackEnrollClick('how_to_apply_cta')}
                   className="btn-cta-dark w-full sm:w-auto"
                 >

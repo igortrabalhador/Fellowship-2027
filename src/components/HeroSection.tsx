@@ -1,19 +1,16 @@
 import content from '@/data/landing-content.json';
 import { trackEnrollClick } from '@/lib/analytics';
+import { getSafeExternalUrl, getSafeVideoSource } from '@/lib/security';
 import { ArrowRightIcon, DocumentIcon, PlayIcon } from './Icons';
 
 interface HeroSectionProps {
   onOpenEdital: () => void;
 }
 
-function isDirectVideoFile(url: string): boolean {
-  return /\.(mp4|webm|ogg)(\?.*)?$/i.test(url.trim());
-}
-
 export function HeroSection({ onOpenEdital }: HeroSectionProps) {
   const { hero, config, footer } = content;
-  const videoUrl = config.videoUrl.trim();
-  const hasVideo = Boolean(videoUrl);
+  const safeEnrollUrl = getSafeExternalUrl(config.enrollUrl);
+  const safeVideo = getSafeVideoSource(config.videoUrl);
 
   return (
     <section
@@ -76,9 +73,10 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
             {/* Primary & secondary actions */}
             <div className="hero-enter hero-enter-d4 mt-6 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-3.5">
               <a
-                href={config.enrollUrl}
+                href={safeEnrollUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                referrerPolicy="strict-origin-when-cross-origin"
                 onClick={() => trackEnrollClick('hero_primary')}
                 className="btn-cta w-full sm:w-auto"
               >
@@ -104,10 +102,10 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
           <div className="lg:col-span-5 hero-enter hero-enter-d3">
             <figure className="m-0 rounded-[20px] overflow-hidden border border-[#6CB6D6]/35 bg-[#0A172D]/85 shadow-[0_24px_60px_rgba(4,12,26,0.52)]">
               <div className="relative aspect-video w-full bg-[#0A172D] overflow-hidden">
-                {hasVideo ? (
-                  isDirectVideoFile(videoUrl) ? (
+                {safeVideo ? (
+                  safeVideo.kind === 'video' ? (
                     <video
-                      src={videoUrl}
+                      src={safeVideo.src}
                       controls
                       playsInline
                       preload="metadata"
@@ -118,10 +116,12 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
                     </video>
                   ) : (
                     <iframe
-                      src={videoUrl}
+                      src={safeVideo.src}
                       title={hero.videoSlot.title}
                       width={1280}
                       height={720}
+                      sandbox="allow-scripts allow-same-origin allow-presentation"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       className="w-full h-full border-0"

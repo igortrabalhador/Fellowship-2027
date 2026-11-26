@@ -9,6 +9,7 @@ import {
 import content from '@/data/landing-content.json';
 import edital from '@/data/edital-content.json';
 import { trackEnrollClick } from '@/lib/analytics';
+import { getSafeExternalUrl, getSafeRelativeAssetPath } from '@/lib/security';
 import {
   CheckIcon,
   CloseIcon,
@@ -220,9 +221,10 @@ export function EditalSheet({ open, onClose }: EditalSheetProps) {
               {/* Action controls */}
               <div className="mt-4 flex flex-wrap items-center gap-2.5">
                 <a
-                  href={content.config.enrollUrl}
+                  href={getSafeExternalUrl(content.config.enrollUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   onClick={() => trackEnrollClick('edital_sheet_enroll')}
                   className="inline-flex items-center gap-2 min-h-[44px] px-4 rounded-full bg-[#5CAACA] text-[#0B1C36] text-[13px] font-semibold no-underline hover:bg-[#6BB4D2] active:scale-[0.97] transition-[background-color,transform] duration-150"
                 >
@@ -231,7 +233,7 @@ export function EditalSheet({ open, onClose }: EditalSheetProps) {
                 </a>
 
                 <a
-                  href={content.config.editalDownloadUrl}
+                  href={getSafeRelativeAssetPath(content.config.editalDownloadUrl)}
                   download="Edital_Fellowship_Uro_Oncologia_HAM_2027.doc"
                   className="inline-flex items-center gap-2 min-h-[44px] px-4 rounded-full border border-[#6CB6D6]/70 bg-[#0F2340]/60 text-white text-[13px] font-medium no-underline hover:bg-[#469ABB]/20 active:scale-[0.97] transition-[background-color,transform] duration-150"
                 >

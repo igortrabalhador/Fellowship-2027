@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from 'motion/react';
 import content from '@/data/landing-content.json';
 import { trackEnrollClick } from '@/lib/analytics';
+import { getSafeExternalUrl } from '@/lib/security';
 import { CloseIcon, DocumentIcon, ExternalArrowIcon } from './Icons';
 
 interface HeaderProps {
@@ -143,9 +144,10 @@ export function Header({ onOpenEdital }: HeaderProps) {
             </button>
 
             <a
-              href={content.config.enrollUrl}
+              href={getSafeExternalUrl(content.config.enrollUrl)}
               target="_blank"
               rel="noopener noreferrer"
+              referrerPolicy="strict-origin-when-cross-origin"
               onClick={() => trackEnrollClick('header_desktop')}
               className="inline-flex items-center gap-2 min-h-[44px] px-5 rounded-full bg-[#5CAACA] text-[#0B1C36] text-[13px] font-semibold tracking-[0.01em] no-underline hover:bg-[#6BB4D2] active:scale-[0.97] transition-[background-color,transform] duration-150"
               style={{ fontVariationSettings: "'wdth' 110, 'wght' 600" }}
@@ -234,9 +236,10 @@ export function Header({ onOpenEdital }: HeaderProps) {
                   <span>{content.hero.editalCta}</span>
                 </button>
                 <a
-                  href={content.config.enrollUrl}
+                  href={getSafeExternalUrl(content.config.enrollUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   onClick={() => {
                     trackEnrollClick('mobile_menu');
                     setMenuOpen(false);
