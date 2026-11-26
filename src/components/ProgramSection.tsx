@@ -14,7 +14,7 @@ export function ProgramSection() {
           className="pointer-events-none absolute -top-10 -right-12 sm:right-0 lg:right-4 w-[280px] sm:w-[400px] lg:w-[540px] max-w-[54vw] z-[2] opacity-40 sm:opacity-65 lg:opacity-85"
         >
           <img
-            src="/assets/imagens/robo-raio-x-alpha.webp"
+            src="assets/imagens/robo-raio-x-alpha.webp"
             alt=""
             width={1600}
             height={2157}

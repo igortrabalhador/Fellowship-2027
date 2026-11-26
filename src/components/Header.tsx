@@ -88,7 +88,7 @@ export function Header({ onOpenEdital }: HeaderProps) {
             aria-label="Início · Fellowship em Uro-oncologia e Cirurgia Robótica HAM 2027"
           >
             <img
-              src="/assets/logos/ham-branco.png"
+              src="assets/logos/ham-branco.png"
               alt="Hospital Aristides Maltez"
               width={597}
               height={229}

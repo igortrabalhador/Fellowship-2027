@@ -23,7 +23,7 @@ export function InvestmentFaqSection() {
           className="pointer-events-none absolute -top-6 -right-10 w-[300px] sm:w-[440px] lg:w-[540px] max-w-[55vw] z-[2] opacity-25 sm:opacity-45"
         >
           <img
-            src="/assets/imagens/bracos-roboticos-alpha.webp"
+            src="assets/imagens/bracos-roboticos-alpha.webp"
             alt=""
             width={2000}
             height={1521}

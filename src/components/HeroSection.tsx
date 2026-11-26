@@ -21,7 +21,7 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
         className="pointer-events-none absolute inset-0 z-[2] overflow-hidden"
       >
         <img
-          src="/assets/imagens/sala-cirurgica-duotone.webp"
+          src="assets/imagens/sala-cirurgica-duotone.webp"
           alt=""
           width={1300}
           height={930}
@@ -107,7 +107,7 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
             <p className="type-label">{footer.realizacaoLabel}</p>
             <div className="flex items-center">
               <img
-                src="/assets/logos/ham-branco.png"
+                src="assets/logos/ham-branco.png"
                 alt="Hospital Aristides Maltez · Liga Bahiana Contra o Câncer"
                 width={597}
                 height={229}
@@ -120,7 +120,7 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
             <p className="type-label">{footer.patrocinioLabel}</p>
             <div className="flex flex-wrap items-center gap-6 sm:gap-7 opacity-90">
               <img
-                src="/assets/logos/novva-branco.png"
+                src="assets/logos/novva-branco.png"
                 alt="NOVVA Marketing de Estratégia"
                 width={646}
                 height={232}
@@ -128,7 +128,7 @@ export function HeroSection({ onOpenEdital }: HeroSectionProps) {
               />
               {config.showMedCall && (
                 <img
-                  src="/assets/logos/medcall-branco.png"
+                  src="assets/logos/medcall-branco.png"
                   alt="MedCall"
                   width={924}
                   height={289}

@@ -46,7 +46,7 @@ export function ClosingFooterSection({ onOpenEdital }: ClosingFooterSectionProps
           className="editorial-wrap flex justify-end"
         >
           <img
-            src="/assets/imagens/bracos-roboticos-fade.webp"
+            src="assets/imagens/bracos-roboticos-fade.webp"
             alt=""
             width={2000}
             height={1521}
@@ -125,7 +125,7 @@ export function ClosingFooterSection({ onOpenEdital }: ClosingFooterSectionProps
               <p className="type-label">{footer.realizacaoLabel}</p>
               <div className="flex items-center">
                 <img
-                  src="/assets/logos/ham-branco.png"
+                  src="assets/logos/ham-branco.png"
                   alt="Hospital Aristides Maltez · Liga Bahiana Contra o Câncer"
                   width={597}
                   height={229}
@@ -139,7 +139,7 @@ export function ClosingFooterSection({ onOpenEdital }: ClosingFooterSectionProps
               <p className="type-label">{footer.patrocinioLabel}</p>
               <div className="flex flex-wrap items-center gap-7 opacity-90">
                 <img
-                  src="/assets/logos/novva-branco.png"
+                  src="assets/logos/novva-branco.png"
                   alt="NOVVA Marketing de Estratégia"
                   width={646}
                   height={232}
@@ -148,7 +148,7 @@ export function ClosingFooterSection({ onOpenEdital }: ClosingFooterSectionProps
                 />
                 {config.showMedCall && (
                   <img
-                    src="/assets/logos/medcall-branco.png"
+                    src="assets/logos/medcall-branco.png"
                     alt="MedCall"
                     width={924}
                     height={289}

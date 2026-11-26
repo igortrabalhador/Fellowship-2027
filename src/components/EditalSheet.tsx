@@ -288,7 +288,7 @@ export function EditalSheet({ open, onClose }: EditalSheetProps) {
                     ))}
                   </div>
                   <img
-                    src="/assets/logos/ham-branco.png"
+                    src="assets/logos/ham-branco.png"
                     alt="Hospital Aristides Maltez"
                     width={597}
                     height={229}

@@ -2,7 +2,7 @@
   "config": {
     "domain": "fellowham.com.br",
     "enrollUrl": "https://www.lbcc.org.br",
-    "editalDownloadUrl": "/edital/Edital_Fellowship_Uro_Oncologia_HAM_2027.doc",
+    "editalDownloadUrl": "edital/Edital_Fellowship_Uro_Oncologia_HAM_2027.doc",
     "editalDate": "07/11/2026",
     "showVideo": false,
     "videoUrl": "",

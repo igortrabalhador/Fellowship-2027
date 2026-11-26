@@ -80,7 +80,7 @@
   inset: 0;
   pointer-events: none;
   z-index: 20;
-  background-image: url('/assets/grao.png');
+  background-image: url('./assets/grao.png');
   background-size: 512px 512px;
   background-repeat: repeat;
   opacity: 0.9;
