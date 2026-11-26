@@ -16,7 +16,7 @@ Todo o texto da página é lido de `src/data/landing-content.json`. O texto inte
 ### Chaves de configuração rápida em `src/data/landing-content.json`
 
 - `config.enrollUrl`: link da ficha de inscrição no site do hospital (`https://www.lbcc.org.br`).
-- `config.showVideo` e `config.videoUrl`: quando `true` e preenchido, ativa o bloco 02 e o botão "Assistir ao vídeo" no hero.
+- `config.videoUrl`: quando preenchido com um link `.mp4`/`.webm` ou embed (YouTube/Vimeo), substitui automaticamente o espaço reservado do vídeo na hero section pelo player ativo.
 - `config.showMedCall`: exibe ou oculta o logotipo da MedCall na faixa de patrocínio.
 - `config.showCoordination`: exibe ou oculta o bloco "Quem coordena".
 - `config.showLegalFooter`: exibe ou oculta a linha de CRM-BA / RQE no rodapé.

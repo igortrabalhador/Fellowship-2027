@@ -37,7 +37,12 @@
     ],
     "primaryCta": "Edital e inscrição",
     "editalCta": "Ler edital completo",
-    "videoCta": "Assistir ao vídeo"
+    "videoCta": "Assistir ao vídeo",
+    "videoSlot": {
+      "eyebrow": "VÍDEO INSTITUCIONAL",
+      "title": "Conheça o programa por quem faz",
+      "pendingNote": "Espaço reservado para o vídeo institucional (em breve)"
+    }
   },
   "video": {
     "eyebrow": "APRESENTAÇÃO",

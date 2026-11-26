@@ -469,19 +469,12 @@
   }
 }
 
-/* ---------- Apple HIG Floating Translucent Chrome (Dose cap: Header + Mobile bar) ---------- */
+/* ---------- Apple HIG Floating Translucent Chrome (Dose cap: Sticky Header only) ---------- */
 .chrome-glass {
   background: rgba(10, 23, 45, 0.86);
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   border-bottom: 1px solid rgba(140, 196, 222, 0.22);
-}
-
-.chrome-glass-bottom {
-  background: rgba(10, 23, 45, 0.86);
-  backdrop-filter: blur(18px) saturate(160%);
-  -webkit-backdrop-filter: blur(18px) saturate(160%);
-  border-top: 1px solid rgba(140, 196, 222, 0.24);
 }
 
 /* ---------- Smooth GPU-friendly Accordion (CSS grid rows) ---------- */
@@ -574,8 +567,7 @@
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .chrome-glass,
-  .chrome-glass-bottom {
+  .chrome-glass {
     background: #0a172d;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -589,8 +581,7 @@
     --text-body: #ffffff;
   }
 
-  .chrome-glass,
-  .chrome-glass-bottom {
+  .chrome-glass {
     background: #0a172d;
     border-color: #8cc4de;
   }

@@ -25,7 +25,7 @@ export function ClosingFooterSection({ onOpenEdital }: ClosingFooterSectionProps
     <section
       ref={sectionRef}
       id={closing.id}
-      className="surface-grain surface-mist-top relative overflow-hidden pt-20 sm:pt-28 pb-28 md:pb-16"
+      className="surface-grain surface-mist-top relative overflow-hidden pt-20 sm:pt-28 pb-14 sm:pb-16"
     >
       {/* Upper luminous mist band: navy ink only (contrast 6.27:1 to 13.06:1) */}
       <div className="editorial-wrap">
